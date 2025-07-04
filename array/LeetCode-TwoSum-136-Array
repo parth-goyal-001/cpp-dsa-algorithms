@@ -1,0 +1,10 @@
+class Solution {
+public:
+    int singleNumber(vector<int>& nums) {
+      int ans = 0;//          // any number ^ 0 = same number, (XOR property)
+        for(int val : nums){
+            ans^=val;      //using Bitwise XOR Function to remove duplicated elements
+        }
+        return ans;
+    }
+};
