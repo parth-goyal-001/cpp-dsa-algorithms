@@ -1,0 +1,18 @@
+// here i choose Kadane's Algorithm to do it with a better space and time complexity:
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+    int cs = 0;          //here, cs = current subarray , ms = maximum subarray;
+    int ms = INT_MIN;      //declared ms as small as possible with the help of INT_MIN function;
+    for(int val: nums){
+        cs+=val;
+        ms = max(cs,ms);      //compare both the array which is bigger;
+        if(cs<0){
+            cs=0;            //assign cs = 0, according to kadane's algorithm, because we only add positive subrarray to find the maximum one. 
+                                So, we assign it negative to zero.
+}
+    }
+    return ms;
+        
+    }
+};
